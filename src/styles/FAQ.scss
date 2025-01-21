@@ -1,0 +1,20 @@
+.faq{
+  @include component_size;
+  li{
+    list-style: none;     
+    padding: 5px;
+    font-size: $font-size-Large;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+  button{
+    @include btn;  
+    border-bottom: 2px solid #222;
+  }
+  p{
+    @include btn;  
+  }
+}

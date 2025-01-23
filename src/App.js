@@ -1,14 +1,32 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.scss";
-import Header from "./components/Header";
 import Banner from "./components/Banner";
 import FAQ from "./components/FAQ";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Membership from "./components/Membership";
+import MoveSlider from "./components/MoveSlider";
+import WhyJoin from "./components/WhyJoin";
+import Login from "./components/Login";
+
 const App = () => {
   return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={
     <div className="app">
-        <Header/>
-        <Banner/>
-        <FAQ/>        
+      <Header />
+      <Banner />
+      <MoveSlider />
+      <WhyJoin />
+      <FAQ />
+      <Membership />
+      <Footer />
     </div>
+    }/>
+    <Route path="/login" element={<Login/>}/>
+    </Routes>
+    </BrowserRouter>
   );
 };
 

@@ -18,6 +18,9 @@
       padding: 10px;
       font-size: $font-size-medium;
       position: relative;      
+      span{
+        word-break:keep-all ;
+      }
     }    
     p{
       font-size: $font-size-medium;   
@@ -29,7 +32,12 @@
       height: 150px;  
       padding: 10px 0;       
       opacity: 1;
+      transition: 0.3s; 
+      @include responsive($breakpoint-small){
+        font-size: $font-size-small;
+        height: auto;
+        word-break: keep-all;        
+      }
     }
-
   }
 }
